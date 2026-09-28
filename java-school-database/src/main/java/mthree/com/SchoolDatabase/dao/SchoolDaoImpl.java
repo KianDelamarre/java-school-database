@@ -84,7 +84,6 @@ public class SchoolDaoImpl implements SchoolDao {
         String sql = "SELECT c.courseCode, c.courseDesc, COUNT(*) numStudents " +
                 "FROM course c " +
                 "JOIN course_student cs ON c.cid = cs.course_id " +
-                "JOIN student s ON cs.student_id = s.sid " +
                 "GROUP BY c.courseCode, c.courseDesc";
 
         // YOUR CODE ENDS HERE
